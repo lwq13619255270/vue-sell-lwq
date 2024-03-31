@@ -1,14 +1,31 @@
 <template>
   <div id="app">
-    <v-header></v-header>
+    <v-header :seller="seller"></v-header>
   </div>
 </template>
 
 <script>
+  import { getSeller } from 'api'
   import VHeader from 'components/v-header/v-header'
 
 export default {
   name: 'App',
+  data() {
+      return {
+        seller: {}
+      }
+    },
+  created() {
+    this._getSeller()
+  },
+  methods: {
+    _getSeller() {
+      getSeller().then(seller => {
+        console.log(seller)
+        this.seller = Object.assign({}, this.seller, seller)
+      })
+    }
+  },
   components: {
     VHeader
   }

@@ -29,3 +29,12 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 cube-ui是滴滴公司的技术团队基于Vue.js实现的精致移动端组件库。开源，虽然组件还不是很多，但是基本场景是够用了。
 官网：https://didi.github.io/cube-ui/#/zh-CN
 GitHub：https://github.com/didi/cube-ui
+
+vue add cube-ui
+
+### axios
+安装
+
+```
+    npm i axios --save
+```

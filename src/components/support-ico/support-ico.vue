@@ -1,5 +1,5 @@
 <template>
-  <span class="support-io" :class="iconCls">zhi</span>
+  <span class="support-io" :class="iconCls"></span>
 </template>
 <script>
   export default {
