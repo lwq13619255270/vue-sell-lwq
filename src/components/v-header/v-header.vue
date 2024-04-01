@@ -103,6 +103,17 @@ export default {
           display: flex;
           justify-content: space-between;
           align-items: center;
+          .support-content {
+            display: flex;
+            align-items: center;
+            .support-ico {
+              margin-right: 4px
+            }
+            .text {
+              line-height: 12px;
+              font-size: $fontsize-small-s
+            }
+          }
           .support-count {
             display: flex;
             align-items: center;
