@@ -1,6 +1,5 @@
 <template>
   <div>
-    <button @click="visible = true">show</button>
     <transition name="fade">
       <div v-show="visible" class="header-detail">
         <div class="detail-wrapper">
@@ -29,7 +28,7 @@
               <p class="content">{{seller.bulletin}}</p>
             </div>
           </div>
-          <div class="detail-close" @click="visible = false">
+          <div class="detail-close" @click="hide">
             <i class="icon-close close-btn"></i>
           </div>
         </div>
@@ -58,6 +57,14 @@
       return {
         visible: false
       }
+    },
+    methods: {
+      show() {
+        this.visible = true
+      },
+      hide() {
+        this.visible = false
+      }
     }
   }
 </script>
@@ -70,6 +77,7 @@
     width: 100%
     height: 100%
     overflow: auto
+    backdrop-filter: blur(5px)
     opacity: 1
     color: $color-white
     background: $color-background-s
