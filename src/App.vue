@@ -35,6 +35,7 @@
       tabs() {
         return [
           {
+            id: '1',
             label: '商品',
             component: Goods,
             data: {
@@ -42,6 +43,7 @@
             }
           },
           {
+            id: '2',
             label: '评论',
             component: Ratings,
             data: {
@@ -49,6 +51,7 @@
             }
           },
           {
+            id: '3',
             label: '商家',
             component: Seller,
             data: {

@@ -18,7 +18,7 @@
 				:options="slideOptions"
 				@scroll="onScroll"
 				@change="onChange">
-				<cube-slide-item v-for="(tab, index) in tabs" :key="index">
+				<cube-slide-item v-for="tab in tabs" :key="tab.id">
 					<component ref="component" :is="tab.component" :data="tab.data"></component>
 				</cube-slide-item>
 			</cube-slide>
@@ -64,11 +64,11 @@
 		},
 		methods: {
 			onScroll(pos) {
-        const tabBarWidth = this.$refs.tabBar.$el.clientWidth
-        const slideWidth = this.$refs.slide.slide.scrollerWidth
-        const transform = -pos.x / slideWidth * tabBarWidth
-        this.$refs.tabBar.setSliderTransform(transform)
-      },
+				const tabBarWidth = this.$refs.tabBar.$el.clientWidth
+				const slideWidth = this.$refs.slide.slide.scrollerWidth
+				const transform = -pos.x / slideWidth * tabBarWidth
+				this.$refs.tabBar.setSliderTransform(transform)
+			},
 			onChange(current) {
         this.index = current
         const instance = this.$refs.component[current]

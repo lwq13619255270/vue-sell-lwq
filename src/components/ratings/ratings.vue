@@ -5,7 +5,18 @@
 </template>
 <script>
   export default {
-    name: 'ratings'
+    name: 'ratings',
+    props: {
+      data: {
+        type: Object,
+        default() {
+          return {}
+        }
+      }
+    },
+    created() {
+      console.log(this.data)
+    }
   }
 </script>
 <style lang="stylus">
